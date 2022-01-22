@@ -1,0 +1,28 @@
+.bar-container {
+    background-color: rgb(109, 69, 75);
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.hovered {
+    width: 20vw;
+    background: linear-gradient(to left, rgb(109, 69, 75), rgba(0,0,0,1) 70%);
+    font-size: 28px;
+    transition: 0.5s;
+}
+
+.categories {
+    cursor: pointer;
+    margin-top: 15vh;
+    font-size: 20px;
+}
+
+.categories:hover {
+    font-size: 25px;
+}

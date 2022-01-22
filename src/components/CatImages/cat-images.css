@@ -1,0 +1,27 @@
+.cat-images {
+  width: 100vw;
+}
+
+.cat-images img {
+    margin: 5vw 0 5vw 5vw;
+}
+
+.cat-images img:hover {
+    transform:scale(1.2);
+    cursor: pointer;
+}
+
+.show-more-btn-act {
+    border: none;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: rgb(109, 69, 75);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 43vw;
+}
+
+.show-more-btn-hide {
+    display: none;
+}
