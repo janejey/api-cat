@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import './side-bar.css'
 import axios from 'axios'
-function SideBar () {
+function SideBar ({setCategoryId}) {
     const [hovered, setHovered] = useState(false)
     const [categories, setCategories] = useState();
 
@@ -9,14 +9,13 @@ function SideBar () {
         axios("https://api.thecatapi.com/v1/categories")
         .then(response => setCategories(response.data))
       }, [])
-      console.log(categories)
 
 
     return (
         <div className={`bar-container ${hovered ? 'hovered' : 'not-hovered'} `} onMouseEnter={() => { setHovered(true) }} onMouseLeave={() => { setHovered(false) }}>
            categories
             <div className='categories'>
-            {categories && categories.map((category) => <p key={category.id}>{category.name}</p>)}
+            {categories && categories.map((category) => <p onClick={() => {setCategoryId(category.id)}} key={category.id}>{category.name}</p>)}
             </div>
         </div>
     )
