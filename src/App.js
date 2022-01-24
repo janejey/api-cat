@@ -1,22 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 import CatImages from './components/CatImages/CatImages';
 import SideBar from './components/SideBar/sideBar';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 function App() {
 
+  const [categoryId, setCategoryId] = useState('')
+
   return (
     <div className="App">
-      <Router>
-        <SideBar />
-        <CatImages />
-        <Switch>
-          <Route path="/category/{id}">
-            
-          </Route>
-        </Switch>
-      </Router>
+        <SideBar setCategoryId={setCategoryId} />
+        <CatImages categoryId={categoryId}/>
     </div>
   );
 }
